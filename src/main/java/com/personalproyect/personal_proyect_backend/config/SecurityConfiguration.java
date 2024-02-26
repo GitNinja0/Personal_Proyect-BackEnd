@@ -38,7 +38,7 @@ public class SecurityConfiguration {
                         .requestMatchers(HttpMethod.GET, endpoint + "/rents", endpoint + "/images/**").permitAll()
                         // .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("USER", "ADMIN")
                         // .requestMatchers(endpoint + "/users").hasRole("ADMIN")
-                        // .requestMatchers(HttpMethod.GET, endpoint + "/events").permitAll()
+                        .requestMatchers(HttpMethod.GET, endpoint + "/sales").permitAll()
                         // .requestMatchers(HttpMethod.GET, endpoint + "/allevents").permitAll()
                         // .requestMatchers(HttpMethod.GET, endpoint + "/images").permitAll()
                         // .requestMatchers(HttpMethod.POST, endpoint + "/images").permitAll()
