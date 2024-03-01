@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.micrometer.common.lang.NonNull;
 
 @RestController
-@RequestMapping(path = "${api-endpoint}/sales")
+@RequestMapping(path = "${api-endpoint}/sale")
 public class SaleController {
     
     SaleService service;
