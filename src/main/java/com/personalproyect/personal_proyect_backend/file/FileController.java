@@ -18,9 +18,11 @@ public class FileController {
     }
 
     @PostMapping(path = "/images")
-    public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file){
+    public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
+        
         storageService.store(file);
-        return ResponseEntity.status(201).body("file upload succesfully");
-    }
+
+        return ResponseEntity.status(201).body("File upload successfully");
+    } 
     
 }

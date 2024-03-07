@@ -16,7 +16,7 @@ public class SaleDto {
     private Long id;
     private String title;
     private String description;
-    private String price;
+    private int price;
     private String image;
     private String direction;
     private String type;

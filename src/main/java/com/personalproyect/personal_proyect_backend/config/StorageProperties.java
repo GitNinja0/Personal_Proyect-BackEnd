@@ -12,8 +12,10 @@ public class StorageProperties {
     }
 
     public void setLocation(String location) {
-        Location = location;
+        this.Location = location;
     }
+
+    
     
     
 }
