@@ -19,8 +19,11 @@ public class SaleDto {
     private int price;
     private String image;
     private String direction;
+    // private int postal_code;
     private String type;
-    private String characteristics;
+    private int rooms;
+    private int bathrooms;
+    private String shortDescription;
     private String status;
 
 }

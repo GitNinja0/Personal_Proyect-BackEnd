@@ -40,7 +40,10 @@ public class SaleService implements IGenericGetService<Sale>, IGenericEditServic
                                 .price(saleDto.getPrice())
                                 .image(saleDto.getImage())
                                 .type(saleDto.getType())
-                                .characteristics(saleDto.getCharacteristics())
+                                .rooms(saleDto.getRooms())
+                                .bathrooms(saleDto.getBathrooms())
+                                // .postal_code(saleDto.getPostal_code())
+                                .shortDescription(saleDto.getShortDescription())
                                 .status(saleDto.getStatus())
                                 .build();
                     repository.save(newSale);
@@ -60,7 +63,10 @@ public class SaleService implements IGenericGetService<Sale>, IGenericEditServic
 
         sale.setTitle(saleDto.getTitle());
         sale.setDescription(saleDto.getDescription());
-        sale.setCharacteristics(saleDto.getCharacteristics());
+        sale.setBathrooms(saleDto.getBathrooms());
+        sale.setRooms(saleDto.getRooms());
+        sale.setShortDescription(saleDto.getShortDescription());
+        // sale.setPostal_code(saleDto.getPostal_code());
         sale.setStatus(saleDto.getStatus());
         sale.setImage(saleDto.getImage());
         sale.setPrice(saleDto.getPrice());

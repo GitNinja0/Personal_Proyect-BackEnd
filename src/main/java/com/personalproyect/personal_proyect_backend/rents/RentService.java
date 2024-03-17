@@ -38,10 +38,13 @@ public class RentService implements IGenericGetService<Rent>, IGenericEditServic
                             .title(rentDto.getTitle())
                             .description(rentDto.getDescription())
                             .direction(rentDto.getDirection())
+                            // .postal_code(rentDto.getPostal_code())
                             .price(rentDto.getPrice())
                             .image(rentDto.getImage())
                             .type(rentDto.getType())
-                            .characteristics(rentDto.getCharacteristics())
+                            .rooms(rentDto.getRooms())
+                            .bathrooms(rentDto.getBathrooms())
+                            .shortDescription(rentDto.getShortDescription())
                             .status(rentDto.getStatus())
                             .build();
             repository.save(newRent);
@@ -69,12 +72,15 @@ public class RentService implements IGenericGetService<Rent>, IGenericEditServic
 
         rent.setTitle(rentDto.getTitle());
         rent.setDescription(rentDto.getDescription());
-        rent.setCharacteristics(rentDto.getCharacteristics());
+        rent.setRooms(rentDto.getRooms());
+        rent.setBathrooms(rentDto.getBathrooms());
+        rent.setShortDescription(rentDto.getShortDescription());
         rent.setStatus(rentDto.getStatus());
         rent.setImage(rentDto.getImage());
         rent.setPrice(rentDto.getPrice());
         rent.setType(rentDto.getType());
         rent.setDirection(rentDto.getDirection());
+        // rent.setPostal_code(rentDto.getPostal_code());
 
         return repository.save(rent);
     }
